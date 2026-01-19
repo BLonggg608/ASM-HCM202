@@ -154,7 +154,12 @@
   height: 48px;
 }
 
+.tool-card {
+  margin-top: 1rem;
+}
+
 .tool-name {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--lacquer-red, #8b1a1a);
 }
@@ -191,7 +196,7 @@
 .step-title {
   color: var(--lacquer-red, #8b1a1a);
   font-size: 1.1rem;
-  margin: 0 0 0.75rem 0;
+  margin-top: 0.5rem;
   font-weight: 600;
 }
 

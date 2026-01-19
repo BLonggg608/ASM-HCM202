@@ -43,9 +43,9 @@ export default function MuseumFooter() {
               </h4>
               <ul className="footer-list">
                 <li>
-                  CLO2: Phân tích quy luật ra đời và bản chất của Đảng
+                  Phân tích quy luật ra đời và bản chất của Đảng
                 </li>
-                <li>CLO4: Đề xuất giải pháp chống "quan liêu số"</li>
+                <li>Đề xuất giải pháp chống "quan liêu số"</li>
               </ul>
             </div>
           </Col>

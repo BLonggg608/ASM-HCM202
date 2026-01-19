@@ -111,13 +111,13 @@ export const Header = ({ headerContent }) => {
       {headerContent?.clo2 && headerContent?.clo4 && (
         <div className="flex flex-wrap justify-center gap-4 mb-8">
           <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--museum-beige)] border-2 border-[var(--lacquer-red)]">
-            <span className="font-bold text-[var(--lacquer-red)]">CLO2</span>
+            {/* <span className="font-bold text-[var(--lacquer-red)]">LÝ LUẬN</span> */}
             <span className="text-sm text-[var(--museum-dark-brown)]">
               {headerContent.clo2}
             </span>
           </div>
           <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--museum-beige)] border-2 border-[var(--jade-green)]">
-            <span className="font-bold text-[var(--jade-green)]">CLO4</span>
+            {/* <span className="font-bold text-[var(--jade-green)]">VẬN DỤNG</span> */}
             <span className="text-sm text-[var(--museum-dark-brown)]">
               {headerContent.clo4}
             </span>

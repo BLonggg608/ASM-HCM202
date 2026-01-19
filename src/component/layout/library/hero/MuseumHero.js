@@ -1,6 +1,6 @@
 "use client";
 
-import { FlagOutlined, StarOutlined } from "@ant-design/icons";
+import { FlagOutlined, StarOutlined, ReadOutlined, RocketOutlined } from "@ant-design/icons"; // Import thêm icon nếu thích
 import { Typography } from "antd";
 import "./MuseumHero.css";
 
@@ -37,14 +37,17 @@ export default function MuseumHero() {
         </div>
 
         <div className="hero-learning-outcomes">
+          {/* Sửa CLO2 -> LÝ LUẬN (Hoặc KIẾN THỨC) */}
           <div className="outcome-badge">
-            <span className="outcome-label">CLO2</span>
+            <span className="outcome-label">LÝ LUẬN</span>
             <span className="outcome-text">
               Phân tích bản chất và nguyên tắc xây dựng Đảng
             </span>
           </div>
+
+          {/* Sửa CLO4 -> VẬN DỤNG (Hoặc THỰC TIỄN) */}
           <div className="outcome-badge">
-            <span className="outcome-label">CLO4</span>
+            <span className="outcome-label">VẬN DỤNG</span>
             <span className="outcome-text">
               Vận dụng giải pháp vào thực tiễn Chuyển đổi số
             </span>

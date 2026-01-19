@@ -33,22 +33,23 @@ export default function AIUsagePage() {
             <p>
               <strong>Link sản phẩm:</strong>{" "}
               <a
-                href="https://codecuatienne.github.io/assignment-vnr202/"
+                href="https://asm-hcm-202.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                codecuatienne.github.io/assignment-vnr202
+                asm-hcm-202.vercel.app
               </a>
             </p>
             <p>
               <strong>Công nghệ:</strong> Website xây dựng bằng Next.js
             </p>
             <p>
-              Việc ứng dụng Trí tuệ nhân tạo (AI) trong sản phẩm này nhằm mục tiêu
-              tối ưu hóa quy trình nghiên cứu, xây dựng nội dung và phát triển
-              giao diện cho Website "Tư tưởng Hồ Chí Minh & Khát vọng 4.0". Chúng
-              tôi cam kết sử dụng AI một cách có trách nhiệm, minh bạch và luôn
-              đặt yếu tố con người (kiểm duyệt, sáng tạo) làm nòng cốt.
+              Việc ứng dụng Trí tuệ nhân tạo (AI) trong sản phẩm này nhằm mục
+              tiêu tối ưu hóa quy trình nghiên cứu, xây dựng nội dung và phát
+              triển giao diện cho Website "Tư tưởng Hồ Chí Minh & Khát vọng
+              4.0". Chúng tôi cam kết sử dụng AI một cách có trách nhiệm, minh
+              bạch và luôn đặt yếu tố con người (kiểm duyệt, sáng tạo) làm nòng
+              cốt.
             </p>
           </div>
         </section>
@@ -59,30 +60,44 @@ export default function AIUsagePage() {
             II. CÁC CÔNG CỤ AI ĐÃ SỬ DỤNG
           </h2>
           <div className="tools-grid">
+            {/* --- GOOGLE GEMINI --- */}
             <div className="tool-card">
-              <div className="tool-icon">🧠</div>
-              <h3 className="tool-name">Google Gemini 1.5 Pro</h3>
-              <p className="tool-desc">
-                Hỗ trợ phân tích tài liệu "Giáo trình Tư tưởng Hồ Chí Minh",
-                tổng hợp các luận điểm về "Đạo đức, Văn minh" và đề xuất ý tưởng
-                liên hệ thực tiễn 4.0.
-              </p>
+              {/* <div className="tool-icon">🧠</div> */}
+              <h3 className="tool-name">Google Gemini</h3>
+              <div className="tool-desc">
+                <strong>Vai trò: Phân tích & Nội dung & Chatbot</strong>
+                <ul style={{ paddingLeft: "20px", listStyleType: "circle" }}>
+                  <li>
+                    <strong>Nghiên cứu tài liệu:</strong> Đọc hiểu Giáo trình Tư tưởng Hồ Chí Minh (Chương 4) và hỗ trợ tổng hợp nội dung.
+                  </li>
+                  <li>
+                    <strong>Sáng tạo nội dung:</strong> Xây dựng cấu trúc website, soạn thảo nội dung cho trang web.
+                  </li>
+                  <li>
+                    <strong>Chatbot:</strong> Cung cấp API để xử lý các câu hỏi của người dùng dựa trên ngữ cảnh bài học.
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            {/* --- CLAUDE / COPILOT --- */}
             <div className="tool-card">
-              <div className="tool-icon">🎨</div>
-              <h3 className="tool-name">Midjourney / Dall-E</h3>
-              <p className="tool-desc">
-                Tạo ý tưởng layout giao diện mang phong cách "Bảo tàng số" và
-                các icon minh họa cho các khái niệm trừu tượng.
-              </p>
-            </div>
-            <div className="tool-card">
-              <div className="tool-icon">💻</div>
-              <h3 className="tool-name">GitHub Copilot</h3>
-              <p className="tool-desc">
-                Hỗ trợ viết code React/Next.js, tối ưu hóa CSS và debug logic
-                xử lý dữ liệu JSON.
-              </p>
+              {/* <div className="tool-icon">💻</div> */}
+              <h3 className="tool-name">Claude</h3>
+              <div className="tool-desc">
+                <strong>Vai trò: Lập trình & Tối ưu kỹ thuật</strong>
+                <ul style={{ paddingLeft: "20px", listStyleType: "circle" }}>
+                  <li>
+                    <strong>Viết code:</strong> Hỗ trợ viết code với React/Next.js, .
+                  </li>
+                  <li>
+                    <strong>Xử lý dữ liệu:</strong> Chuyển đổi nội dung văn bản sang nội dung web.
+                  </li>
+                  <li>
+                    <strong>Giao diện:</strong> Hỗ trợ thiết kế giao diện cho trang web.
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -95,8 +110,9 @@ export default function AIUsagePage() {
           <div className="process-steps">
             <h3 className="step-title">Bước 1: Ra lệnh (Prompting)</h3>
             <p>
-              Nhóm xây dựng các prompt chi tiết dựa trên file <code>context.txt</code>{" "}
-              (Dữ liệu nền tảng giáo trình) để AI không "bịa" thông tin lý luận.
+              Nhóm xây dựng các prompt chi tiết dựa trên file{" "}
+              <code>context.txt</code> (Dữ liệu nền tảng giáo trình) để AI không
+              "bịa" thông tin lý luận.
             </p>
 
             <h3 className="step-title">Bước 2: Sàn lọc & Tổng hợp</h3>
@@ -162,7 +178,8 @@ export default function AIUsagePage() {
                   <strong>Quyết định cuối cùng</strong>
                 </td>
                 <td>
-                  Đưa ra quyết định về cấu trúc website và thông điệp truyền tải.
+                  Đưa ra quyết định về cấu trúc website và thông điệp truyền
+                  tải.
                 </td>
               </tr>
             </tbody>
