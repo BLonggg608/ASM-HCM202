@@ -307,17 +307,17 @@ const contentData = {
           content: {
             solutions: [
               {
-                principle: "Đảng là Văn minh (4.0)",
+                principle: "Đảng là Văn minh",
                 action:
                   "Đảng đi đầu trong Chuyển đổi số (Digital Transformation). Dùng AI/Big Data để hỗ trợ quản lý và ra quyết định.",
               },
               {
-                principle: "Tự phê bình và phê bình (4.0)",
+                principle: "Tự phê bình",
                 action:
                   "Minh bạch hóa tài sản và quy trình công vụ trên môi trường mạng (Transparency).",
               },
               {
-                principle: "Dựa vào dân (4.0)",
+                principle: "Dựa vào dân",
                 action:
                   "Xây dựng App/Web để người dân chấm điểm, feedback trực tiếp thái độ phục vụ của cán bộ.",
               },
