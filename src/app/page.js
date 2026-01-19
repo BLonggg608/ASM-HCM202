@@ -7,52 +7,51 @@ export default function Dashboard() {
   const historicalImages = [
     {
       title: "Chủ tịch Hồ Chí Minh",
-      thumbnail: "https://media.vov.vn/sites/default/files/styles/large/public/2021-05/bac_ho_noi_chuyen_voi_can_bo__dang_vien.jpg",
+      thumbnail:
+        "https://media.baocaobang.vn/upload/image/202405/medium/119322_chu_tich_ho_chi_minh_doc_tuyen_ngon_doc_lap_anh_t_l_05340013.jpg",
     },
     {
       title: "Đại hội Đảng",
       thumbnail:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Communist_Party_of_Vietnam_flag.svg/2560px-Communist_Party_of_Vietnam_flag.svg.png",
+        "https://vnanet.vn/Data/Articles/2021/01/16/5238062/vna_potal_dai_hoi_lan_thu_nhat_cua_dang_khoi_phuc_to_chuc_thong_nhat_cac_phong_trao_dau_tranh_cach_mang_duoi_su_lanh_dao_cua_dang_145515225_stand.jpg",
     },
     {
       title: "Tư tưởng Hồ Chí Minh",
       thumbnail:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ho_Chi_Minh_1946.jpg/220px-Ho_Chi_Minh_1946.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9YluwUSuh6yLUdIw9NMVQcllQvjdBehLMKg&s",
     },
     {
       title: "Nhà nước Pháp quyền",
       thumbnail:
-        "https://cdn.chinhphu.vn/334894974524682240/2022/10/8/co-do-sao-vang-166520379208034448530.jpg",
+        "https://images.hcmcpv.org.vn/res/news/2021/12/12-12-2021-xay-dung-nha-nuoc-phap-quyen-xa-hoi-chu-nghia-theo-quan-diem-cua-chu-tich-ho-chi-minh-28448453.jpg",
     },
     {
       title: "Quốc hội Việt Nam",
-      thumbnail:
-        "https://data.quochoi.vn/UserControls/Publishing/News/Image/2021/1/6/1.jpg",
+      thumbnail: "https://hdll.vn/FileUpload/Images/ttxvn_khaimac.jpg",
     },
     {
       title: "Chuyển đổi số Quốc gia",
       thumbnail:
-        "https://mic.gov.vn/Uploads/2022/10/10/12/04/Chuyen-doi-so-quoc-gia.jpg",
+        "https://www.meinvoice.vn/wp-content/uploads/2025/01/ngay-chuy-doi-so-quoc-gia.png",
     },
     {
-      title: "Thanh niên xung kích 4.0",
+      title: "Thế hệ kiến tạo tương lai",
       thumbnail:
-        "https://doanthanhnien.vn/Content/uploads/images/132829702148100812_3-san-sang-080821.jpg",
+        "https://special.nhandan.vn/tuong-lai-cho-the-he-vuon-minh/assets/AtmJIrJSSX/0000-2500x1406.jpg",
     },
     {
       title: "Đoàn kết Dân tộc",
       thumbnail:
-        "https://cdnmedia.baotintuc.vn/Upload/e9GdNZvHDFi8lZSWc6ubA/files/2025/04/dieu-hanh-30425-3.jpg",
+        "https://a.tcnnld.vn//Upload/Images/Normal/2025/10/4ad4dc730da27bdfdc0518bc3b75dfe2-20251006_0947_Doan-Ket-Dan-Toc_simple_compose_01k6vpjhj1fnya9g3kqetrdfcp65424-01.jpg",
     },
     {
       title: "Cần, Kiệm, Liêm, Chính",
       thumbnail:
-        "https://tuyengiao.vn/Uploads/2019/6/5/26/dang-cong-san-viet-nam.jpg",
+        "https://tttctt.1cdn.vn/thumbs/720x480/2024/05/18/ho-chi-minh.jpg",
     },
     {
       title: "Đổi mới sáng tạo",
-      thumbnail:
-        "https://cdn.vnu.edu.vn/upload/2019/08/29/image001.jpg",
+      thumbnail: "https://images.squarespace-cdn.com/content/v1/5930dc9237c5817c00b10842/1587183012138-NVA9LT7AR1Y9G5RCYINT/10_innovations_lessons_2_o.jpg",
     },
   ];
 
@@ -68,7 +67,8 @@ export default function Dashboard() {
     },
     {
       title: "Trắc Nghiệm Kiến Thức",
-      description: "Kiểm tra sự hiểu biết về Đạo đức cách mạng và Nhà nước pháp quyền",
+      description:
+        "Kiểm tra sự hiểu biết về Đạo đức cách mạng và Nhà nước pháp quyền",
       // link: "https://play.blooket.com/play",
       link: "/library/quiz",
       icon: "EditOutlined",
@@ -76,7 +76,8 @@ export default function Dashboard() {
     },
     {
       title: "AI Usage",
-      description: "Ứng dụng AI có trách nhiệm – minh bạch – sáng tạo – liêm chính học thuật",
+      description:
+        "Ứng dụng AI có trách nhiệm – minh bạch – sáng tạo – liêm chính học thuật",
       link: "/ai-usage",
       icon: "RobotOutlined",
       color: "lacquer-gold",

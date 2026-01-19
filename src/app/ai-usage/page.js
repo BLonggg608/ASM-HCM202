@@ -88,7 +88,7 @@ export default function AIUsagePage() {
                 <strong>Vai trò: Lập trình & Tối ưu kỹ thuật</strong>
                 <ul style={{ paddingLeft: "20px", listStyleType: "circle" }}>
                   <li>
-                    <strong>Viết code:</strong> Hỗ trợ viết code với React/Next.js, .
+                    <strong>Viết code:</strong> Hỗ trợ viết code với Next.js, .
                   </li>
                   <li>
                     <strong>Xử lý dữ liệu:</strong> Chuyển đổi nội dung văn bản sang nội dung web.
