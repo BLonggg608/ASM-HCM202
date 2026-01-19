@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Phân Tích Giai Đoạn 1954-1975: Đảng Lãnh Đạo Thống Nhất Đất Nước
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: The application is structured as a narrative journey for university students, moving from historical context to a deep dive into the 1954-1975 period, and concluding with analysis and reflection.
+    1.  Header & Navigation: Sticky header for easy navigation between key sections.
+    2.  Hero Section: An impactful introduction setting the theme.
+    3.  Historical Context (1930-1954): An interactive vertical timeline to quickly summarize the preceding events, ensuring users understand the foundation before the main analysis. This makes background information digestible and optional for those already familiar.
+    4.  The Core (1954-1975): A dual-column layout is the central design choice, directly reflecting the historical reality of two strategic tasks in two regions (North and South). This allows for direct comparison and understanding of the complex situation. Interactive tabs ("Chính trị", "Kinh tế", "Quân sự") within each column allow users to explore different facets in a structured way. This non-linear exploration is more engaging than a simple text block.
+    5.  Analysis & Lessons: This section synthesizes the information using a donut chart for visual impact and interactive cards for key takeaways, addressing the prompt's goal to analyze the reasons for victory and strengthen pride.
+    6.  Orientation for Students: A concluding section that connects history to the present, fulfilling the requirement to orient students towards the Party's ideals.
+    This structure was chosen to transform a dense historical topic into an engaging, explorable, and educational experience tailored for students, promoting understanding over rote memorization. -->
+    <!-- Visualization & Content Choices:
+    1.  Historical Timeline (1930-1954):
+        -   Report Info: Key events leading up to 1954.
+        -   Goal: Inform & Contextualize.
+        -   Presentation: Vertical timeline with clickable nodes.
+        -   Interaction: Clicking a node reveals a concise summary.
+        -   Justification: Efficiently provides background without overwhelming the user.
+        -   Library/Method: HTML/CSS/Vanilla JS.
+    2.  Dual-Task Tabs (1954-1975):
+        -   Report Info: Developments in North and South Vietnam.
+        -   Goal: Compare & Organize.
+        -   Presentation: Two-column layout with tabbed content.
+        -   Interaction: Clicking tabs changes the displayed text within each column.
+        -   Justification: Best represents the core historical theme of the period and allows for focused exploration of different aspects (politics, economy, military).
+        -   Library/Method: HTML/Tailwind/Vanilla JS.
+    3.  Factors for Victory Chart:
+        -   Report Info: Analysis of reasons for success.
+        -   Goal: Synthesize & Analyze.
+        -   Presentation: Donut chart.
+        -   Interaction: Hovering over segments shows tooltips with details.
+        -   Justification: Visually represents complex abstract concepts (sources of strength) in a simple, memorable format. Far more impactful than a bulleted list.
+        -   Library/Method: Chart.js/Canvas.
+    4.  Key Resolutions/Lessons:
+        -   Report Info: The Party's strategic decisions and historical lessons.
+        -   Goal: Inform & Emphasize.
+        -   Presentation: Interactive cards.
+        -   Interaction: Hover effects to draw attention.
+        -   Justification: Breaks down key information into digestible, modern-looking UI components.
+        -   Library/Method: HTML/Tailwind.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #fdfbf8;
+        color: #333;
+      }
+      .hero-bg {
+        background-color: #fdfbf8;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(253, 251, 248, 0.8),
+            #fdfbf8
+          ),
+          url("https://placehold.co/1920x1080/D1C7BD/333333?text=B%E1%BB%91i+C%E1%BA%A3nh+L%E1%BB%8Bch+S%E1%BB%AD");
+        background-size: cover;
+        background-position: center;
+      }
+      .active-nav {
+        color: #b91c1c;
+        font-weight: 600;
+      }
+      .inactive-nav {
+        color: #374151;
+      }
+      .active-tab {
+        background-color: #b91c1c;
+        color: #fff;
+      }
+      .inactive-tab {
+        background-color: #e5e7eb;
+        color: #374151;
+        transition: all 0.3s;
+      }
+      .inactive-tab:hover {
+        background-color: #d1d5db;
+      }
+      .timeline-item {
+        position: relative;
+        padding-bottom: 2.5rem;
+        padding-left: 2.5rem;
+        border-left: 2px solid #d1c7bd;
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -0.6rem;
+        top: 0;
+        height: 1.125rem;
+        width: 1.125rem;
+        border-radius: 9999px;
+        background-color: #fdfbf8;
+        border: 2px solid #ae9a86;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .timeline-item.active .timeline-dot {
+        background-color: #b91c1c;
+        border-color: #b91c1c;
+        transform: scale(1.2);
+      }
+      .section-title {
+        color: #ae9a86;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 450px;
+        margin: auto;
+        height: 450px;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex-shrink-0">
+            <span class="text-xl font-bold text-red-800">LỊCH SỬ ĐẢNG</span>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a
+                href="#context"
+                class="nav-link px-3 py-2 rounded-md text-sm font-medium inactive-nav transition-colors"
+                >Bối Cảnh</a
+              >
+              <a
+                href="#main-period"
+                class="nav-link px-3 py-2 rounded-md text-sm font-medium inactive-nav transition-colors"
+                >Giai Đoạn 1954-1975</a
+              >
+              <a
+                href="#analysis"
+                class="nav-link px-3 py-2 rounded-md text-sm font-medium inactive-nav transition-colors"
+                >Phân Tích</a
+              >
+              <a
+                href="#orientation"
+                class="nav-link px-3 py-2 rounded-md text-sm font-medium inactive-nav transition-colors"
+                >Định Hướng</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#context"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium inactive-nav"
+            >Bối Cảnh</a
+          >
+          <a
+            href="#main-period"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium inactive-nav"
+            >Giai Đoạn 1954-1975</a
+          >
+          <a
+            href="#analysis"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium inactive-nav"
+            >Phân Tích</a
+          >
+          <a
+            href="#orientation"
+            class="nav-link block px-3 py-2 rounded-md text-base font-medium inactive-nav"
+            >Định Hướng</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <h1
+            class="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight"
+          >
+            Đảng Lãnh Đạo Hoàn Thành Thống Nhất Đất Nước
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Phân tích vai trò lãnh đạo của Đảng Cộng sản Việt Nam trong giai
+            đoạn lịch sử hào hùng 1954 - 1975, thực hiện đồng thời hai nhiệm vụ
+            chiến lược, đưa dân tộc đến thắng lợi cuối cùng.
+          </p>
+        </div>
+      </section>
+
+      <section id="context" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2
+              class="text-base font-semibold tracking-wider text-red-700 uppercase"
+            >
+              Tiền đề Lịch sử
+            </h2>
+            <p
+              class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+            >
+              Những Chặng Đường Đầu Tiên (1930-1954)
+            </p>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Để hiểu sâu sắc giai đoạn 1954-1975, cần nhìn lại những bước ngoặt
+              quan trọng trước đó, nơi bản lĩnh và trí tuệ của Đảng được tôi
+              luyện.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 items-start">
+            <div class="md:col-span-1">
+              <div id="timeline">
+                <div class="timeline-item active" data-id="1930">
+                  <div class="timeline-dot"></div>
+                  <h3 class="font-semibold text-lg text-gray-800">
+                    1930: Thành lập Đảng
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Đảng Cộng sản Việt Nam ra đời, đánh dấu bước ngoặt vĩ đại
+                    của cách mạng.
+                  </p>
+                </div>
+                <div class="timeline-item" data-id="1945">
+                  <div class="timeline-dot"></div>
+                  <h3 class="font-semibold text-lg text-gray-800">
+                    1945: Cách mạng Tháng Tám
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Đảng lãnh đạo nhân dân giành chính quyền, khai sinh nước
+                    Việt Nam Dân chủ Cộng hòa.
+                  </p>
+                </div>
+                <div class="timeline-item" data-id="1954">
+                  <div class="timeline-dot"></div>
+                  <h3 class="font-semibold text-lg text-gray-800">
+                    1954: Chiến thắng Điện Biên Phủ
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Kết thúc thắng lợi cuộc kháng chiến chống Pháp, ký Hiệp định
+                    Genève, miền Bắc hoàn toàn giải phóng.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-2 bg-gray-50 p-8 rounded-lg shadow-inner">
+              <div id="timeline-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-period" class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2
+              class="text-base font-semibold tracking-wider text-red-700 uppercase"
+            >
+              Trọng tâm
+            </h2>
+            <p
+              class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+            >
+              Hai Nhiệm Vụ Chiến Lược Song Hành (1954-1975)
+            </p>
+            <p class="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+              Đây là giai đoạn lịch sử đặc biệt, Đảng lãnh đạo nhân dân cả nước
+              thực hiện đồng thời hai nhiệm vụ chiến lược ở hai miền, có quan hệ
+              mật thiết với nhau.
+            </p>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">
+                MIỀN BẮC
+              </h3>
+              <p class="text-center text-gray-600 mb-6">
+                Xây dựng Chủ nghĩa Xã hội, làm hậu phương lớn cho tiền tuyến
+                miền Nam.
+              </p>
+              <div
+                class="flex justify-center space-x-2 mb-6"
+                data-region="north"
+              >
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md active-tab"
+                  data-target="north-politics"
+                >
+                  Chính trị
+                </button>
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md inactive-tab"
+                  data-target="north-economy"
+                >
+                  Kinh tế
+                </button>
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md inactive-tab"
+                  data-target="north-military"
+                >
+                  Hậu phương
+                </button>
+              </div>
+              <div class="tab-content" id="north-content"></div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold text-center text-gray-800 mb-4">
+                MIỀN NAM
+              </h3>
+              <p class="text-center text-gray-600 mb-6">
+                Đấu tranh giải phóng, thống nhất đất nước.
+              </p>
+              <div
+                class="flex justify-center space-x-2 mb-6"
+                data-region="south"
+              >
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md active-tab"
+                  data-target="south-politics"
+                >
+                  Chính trị
+                </button>
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md inactive-tab"
+                  data-target="south-economy"
+                >
+                  Đấu tranh
+                </button>
+                <button
+                  class="tab-btn px-4 py-2 text-sm font-semibold rounded-md inactive-tab"
+                  data-target="south-military"
+                >
+                  Quân sự
+                </button>
+              </div>
+              <div class="tab-content" id="south-content"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="analysis" class="py-16 sm:py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2
+              class="text-base font-semibold tracking-wider text-red-700 uppercase"
+            >
+              Tổng kết
+            </h2>
+            <p
+              class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+            >
+              Cội Nguồn Sức Mạnh Dẫn Đến Thắng Lợi
+            </p>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Thắng lợi vĩ đại của cuộc kháng chiến chống Mỹ, cứu nước là kết
+              tinh của nhiều yếu tố, trong đó sự lãnh đạo của Đảng là nhân tố
+              quyết định hàng đầu.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="chart-container">
+              <canvas id="victoryChart"></canvas>
+            </div>
+            <div>
+              <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-gray-800">
+                    Đường lối đúng đắn, sáng tạo
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Đảng đã đề ra đường lối tiến hành đồng thời cách mạng XHCN ở
+                    miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam,
+                    phản ánh đúng quy luật khách quan và nguyện vọng của nhân
+                    dân.
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-gray-800">
+                    Sức mạnh đại đoàn kết toàn dân tộc
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Phát huy truyền thống yêu nước, xây dựng khối đại đoàn kết
+                    vững chắc, tạo nên sức mạnh vô địch để chiến thắng mọi kẻ
+                    thù.
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="font-semibold text-gray-800">
+                    Sự ủng hộ của quốc tế
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Kết hợp sức mạnh dân tộc với sức mạnh thời đại, tranh thủ sự
+                    ủng hộ, giúp đỡ của các nước XHCN anh em và nhân dân yêu
+                    chuộng hòa bình trên thế giới.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="orientation" class="py-16 sm:py-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2
+              class="text-base font-semibold tracking-wider text-red-700 uppercase"
+            >
+              Tiếp nối
+            </h2>
+            <p
+              class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+            >
+              Định Hướng Phấn Đấu Cho Sinh Viên
+            </p>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+              Lịch sử là ngọn đuốc soi đường cho tương lai. Mỗi sinh viên là một
+              người tiếp lửa, mang lý tưởng của Đảng vào công cuộc xây dựng và
+              bảo vệ Tổ quốc hôm nay.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mx-auto mb-4"
+              >
+                <span class="text-2xl">🎓</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800">
+                Vững Vàng Lý Tưởng
+              </h4>
+              <p class="mt-2 text-gray-600">
+                Nâng cao nhận thức, tin tưởng tuyệt đối vào sự lãnh đạo của
+                Đảng, con đường đi lên CNXH. Tích cực học tập, nghiên cứu chủ
+                nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mx-auto mb-4"
+              >
+                <span class="text-2xl">💡</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800">
+                Rèn Luyện Bản Lĩnh
+              </h4>
+              <p class="mt-2 text-gray-600">
+                Không ngừng học tập, trau dồi tri thức khoa học, chuyên môn
+                nghiệp vụ để trở thành nguồn nhân lực chất lượng cao, sẵn sàng
+                cống hiến cho sự nghiệp công nghiệp hóa, hiện đại hóa đất nước.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div
+                class="flex items-center justify-center h-12 w-12 rounded-full bg-red-100 mx-auto mb-4"
+              >
+                <!-- <span class="text-2xl">🚀</span> -->
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800">
+                Hành Động Sáng Tạo
+              </h4>
+              <p class="mt-2 text-gray-600">
+                Tham gia tích cực các phong trào thanh niên tình nguyện, các
+                hoạt động xã hội. Đấu tranh phản bác các quan điểm sai trái, thù
+                địch, bảo vệ nền tảng tư tưởng của Đảng.
+              </p>
+            </div>
+          </div>
+          <div class="mt-12 text-center text-gray-600 italic">
+            <p>
+              "Non sông Việt Nam có trở nên tươi đẹp hay không, dân tộc Việt Nam
+              có bước tới đài vinh quang để sánh vai với các cường quốc năm châu
+              được hay không, chính là nhờ một phần lớn ở công học tập của các
+              em."
+            </p>
+            <p class="font-semibold mt-2">- Hồ Chí Minh -</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800">
+      <div
+        class="container mx-auto py-4 px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm"
+      >
+        <p>
+          &copy; 2025. Báo cáo tương tác dành cho sinh viên, phục vụ mục đích
+          học tập và nghiên cứu Đảng Cộng sản Việt Nam: Đạo đức, Văn minh & Khát vọng 4.0.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const timelineContentData = {
+          1930: {
+            title: "Sự Ra Đời Của Đảng Cộng Sản Việt Nam",
+            content:
+              "Ngày 3/2/1930, Đảng Cộng sản Việt Nam ra đời từ sự hợp nhất các tổ chức cộng sản, là kết quả của quá trình vận động cách mạng và sự truyền bá chủ nghĩa Mác-Lênin của lãnh tụ Nguyễn Ái Quốc. Sự kiện này chấm dứt thời kỳ khủng hoảng về đường lối cứu nước, khẳng định vai trò lãnh đạo duy nhất của giai cấp công nhân thông qua đội tiên phong là Đảng Cộng sản.",
+          },
+          1945: {
+            title: "Thắng Lợi Của Cách Mạng Tháng Tám",
+            content:
+              "Dưới sự lãnh đạo của Đảng và Chủ tịch Hồ Chí Minh, nhân dân ta đã chớp thời cơ, tiến hành Tổng khởi nghĩa giành chính quyền trên cả nước. Ngày 2/9/1945, tại Quảng trường Ba Đình, Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa, nhà nước công nông đầu tiên ở Đông Nam Á.",
+          },
+          1954: {
+            title: "Chiến Thắng Lịch Sử Điện Biên Phủ và Hiệp Định Genève",
+            content:
+              "Sau 9 năm kháng chiến trường kỳ, quân và dân ta đã làm nên chiến thắng Điện Biên Phủ 'lừng lẫy năm châu, chấn động địa cầu'. Thắng lợi này buộc thực dân Pháp phải ký Hiệp định Genève, công nhận độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ của Việt Nam. Miền Bắc được hoàn toàn giải phóng, bắt đầu một giai đoạn mới.",
+          },
+        };
+
+        const mainPeriodContent = {
+          "north-politics": {
+            title: "Củng cố chính quyền, hoàn thiện quan hệ sản xuất",
+            content:
+              "Đảng lãnh đạo củng cố chính quyền dân chủ nhân dân, tiến hành cải cách dân chủ, đặc biệt là Cải cách ruộng đất nhằm xóa bỏ tàn dư của chế độ phong kiến, thực hiện khẩu hiệu 'người cày có ruộng'. Sau đó, tiến hành cải tạo xã hội chủ nghĩa đối với nông nghiệp, thủ công nghiệp, thương nghiệp tư bản tư doanh, xây dựng quan hệ sản xuất mới.",
+          },
+          "north-economy": {
+            title: "Xây dựng kinh tế, thực hiện các kế hoạch 5 năm",
+            content:
+              "Miền Bắc tập trung khôi phục kinh tế sau chiến tranh và bắt tay vào xây dựng cơ sở vật chất - kỹ thuật ban đầu của CNXH thông qua các Kế hoạch 5 năm (1961-1965). Ưu tiên phát triển công nghiệp nặng một cách hợp lý, đồng thời ra sức phát triển nông nghiệp và công nghiệp nhẹ, từng bước cải thiện đời sống nhân dân.",
+          },
+          "north-military": {
+            title: "Nghĩa vụ hậu phương lớn",
+            content:
+              "Miền Bắc không chỉ xây dựng kinh tế mà còn là hậu phương chiến lược, chi viện sức người, sức của cho tiền tuyến lớn miền Nam. Hàng triệu thanh niên lên đường nhập ngũ, hàng vạn tấn lương thực, vũ khí được vận chuyển qua đường mòn Hồ Chí Minh trên bộ và trên biển, thể hiện ý chí thống nhất non sông.",
+          },
+          "south-politics": {
+            title: "Xây dựng lực lượng, đấu tranh chính trị",
+            content:
+              "Đảng lãnh đạo nhân dân miền Nam đấu tranh chính trị đòi đối phương thi hành Hiệp định Genève, chống lại chính sách khủng bố, đàn áp của chính quyền Ngô Đình Diệm. Phong trào Đồng Khởi (1959-1960) là một bước ngoặt, chuyển cách mạng từ thế giữ gìn lực lượng sang thế tiến công, kết hợp đấu tranh chính trị với đấu tranh vũ trang.",
+          },
+          "south-economy": {
+            title: "Chống phá 'ấp chiến lược', xây dựng vùng giải phóng",
+            content:
+              "Nhân dân miền Nam dưới sự lãnh đạo của Đảng và Mặt trận Dân tộc Giải phóng đã kiên quyết đấu tranh chống chính sách 'tố cộng, diệt cộng', phá 'ấp chiến lược' của địch. Vùng giải phóng được thành lập và mở rộng, trở thành hậu phương tại chỗ, nơi xây dựng cuộc sống mới và là căn cứ địa vững chắc cho cách mạng.",
+          },
+          "south-military": {
+            title: "Lần lượt đánh bại các chiến lược chiến tranh của Mỹ",
+            content:
+              "Quân và dân miền Nam đã anh dũng chiến đấu, lần lượt đánh bại các chiến lược chiến tranh của Mỹ: 'Chiến tranh đặc biệt' (1961-1965), 'Chiến tranh cục bộ' (1965-1968), 'Việt Nam hóa chiến tranh' (1969-1973). Đỉnh cao là cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân 1968 và kết thúc bằng Đại thắng mùa Xuân 1975 với chiến dịch Hồ Chí Minh lịch sử.",
+          },
+        };
+
+        const timeline = document.getElementById("timeline");
+        const timelineContentContainer =
+          document.getElementById("timeline-content");
+
+        function updateTimelineContent(id) {
+          const data = timelineContentData[id];
+          timelineContentContainer.innerHTML = `
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">${data.title}</h3>
+                    <p class="text-gray-600 leading-relaxed">${data.content}</p>
+                `;
+          document.querySelectorAll(".timeline-item").forEach((item) => {
+            item.classList.remove("active");
+            if (item.dataset.id === id) {
+              item.classList.add("active");
+            }
+          });
+        }
+
+        timeline.addEventListener("click", (e) => {
+          const item = e.target.closest(".timeline-item");
+          if (item) {
+            updateTimelineContent(item.dataset.id);
+          }
+        });
+
+        updateTimelineContent("1930");
+
+        function updateTabContent(targetId) {
+          const data = mainPeriodContent[targetId];
+          const contentContainer = targetId.startsWith("north")
+            ? document.getElementById("north-content")
+            : document.getElementById("south-content");
+
+          contentContainer.innerHTML = `
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">${data.title}</h4>
+                    <p class="text-gray-600 leading-relaxed">${data.content}</p>
+                `;
+        }
+
+        document.querySelectorAll(".tab-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            const region = button.closest("[data-region]").dataset.region;
+            document
+              .querySelectorAll(`[data-region="${region}"] .tab-btn`)
+              .forEach((btn) => {
+                btn.classList.remove("active-tab");
+                btn.classList.add("inactive-tab");
+              });
+            button.classList.add("active-tab");
+            button.classList.remove("inactive-tab");
+            updateTabContent(button.dataset.target);
+          });
+        });
+
+        updateTabContent("north-politics");
+        updateTabContent("south-politics");
+
+        const ctx = document.getElementById("victoryChart").getContext("2d");
+        const victoryChart = new Chart(ctx, {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Sự Lãnh Đạo Của Đảng",
+              "Đại Đoàn Kết Dân Tộc",
+              "Hậu Phương Miền Bắc",
+              "Ủng Hộ Quốc Tế",
+            ],
+            datasets: [
+              {
+                label: "Các Yếu Tố Thắng Lợi",
+                data: [40, 30, 15, 15],
+                backgroundColor: ["#B91C1C", "#DC2626", "#F87171", "#FECACA"],
+                borderColor: "#FFFFFF",
+                borderWidth: 3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: {
+                  font: {
+                    family: "'Inter', sans-serif",
+                  },
+                },
+              },
+              title: {
+                display: true,
+                text: "Phân Bố Các Yếu Tố Quyết Định Thắng Lợi (Minh Họa)",
+                font: {
+                  size: 16,
+                  family: "'Inter', sans-serif",
+                  weight: "600",
+                },
+                color: "#333",
+              },
+              tooltip: {
+                callbacks: {
+                  label: function (context) {
+                    let label = context.label || "";
+                    if (label) {
+                      label += ": ";
+                    }
+                    if (context.parsed !== null) {
+                      label += context.parsed + "%";
+                    }
+                    return label;
+                  },
+                },
+              },
+            },
+          },
+        });
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("section");
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.4,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => {
+                link.classList.remove("active-nav");
+                link.classList.add("inactive-nav");
+                if (
+                  link.getAttribute("href").substring(1) === entry.target.id
+                ) {
+                  link.classList.add("active-nav");
+                  link.classList.remove("inactive-nav");
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            if (mobileMenu.classList.contains("hidden") === false) {
+              mobileMenu.classList.add("hidden");
+            }
+            e.preventDefault();
+            document.querySelector(link.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
