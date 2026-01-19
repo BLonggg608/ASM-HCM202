@@ -38,26 +38,26 @@ export default function FoundationSection() {
       <div className="section-block">
         <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
-            <div className="subsection-number">1.1</div>
-            <h3 className="subsection-title">{section11?.title || "Sự cần thiết"}</h3>
+            {/* <div className="subsection-number">1.1</div> */}
+            <h3 className="subsection-title">
+              {section11?.title || "Sự cần thiết"}
+            </h3>
           </div>
         </ScrollReveal>
 
         <ScrollReveal variant="slideRight" delay={0.2} duration={0.7}>
           <div className="context-section domestic">
-            <h4 className="context-title">
+            {/* <h4 className="context-title">
               <span className="title-marker">✦</span>
-              {/* Fallback title nếu data chưa có */}
-              Tính Tất Yếu Lịch Sử
-            </h4>
+              Quy Luật Ra Đời & Vai Trò Lãnh Đạo
+            </h4> */}
 
             <div className="split-content reverse">
               <div className="image-content">
-                <ARImage
-                  src="https://media.vov.vn/sites/default/files/styles/large/public/2021-05/bac_ho_noi_chuyen_voi_can_bo__dang_vien.jpg"
+                <Image
+                  src="https://file3.qdnd.vn/data/images/0/2022/07/06/huydong/bac%20ho%202.jpg?dpi=150&quality=100&w=870"
                   alt="Người cầm lái vĩ đại"
                   // Tạm thời ẩn QR code cũ để tránh nhầm lẫn nội dung AR
-                  // qrCodePath={Assets.QRImageViTuyen17QrCode} 
                   preview={true}
                   style={{ width: "100%", borderRadius: "8px" }}
                   caption="Người cầm lái có vững thuyền mới chạy"
@@ -66,25 +66,34 @@ export default function FoundationSection() {
 
               <div className="text-content">
                 <div className="region-info north">
-                  <h5 className="region-label">Quan điểm cốt lõi</h5>
+                  <h5 className="region-label">Quy luật Hình thành</h5>
+                  <p
+                    className="region-text"
+                    style={{ fontSize: "1rem", textAlign: "justify" }}
+                  >
+                    {section11?.content?.formation_law ||
+                      "Khác với lý luận của Lênin..."}
+                  </p>
+                </div>
+                <div
+                  className="region-info south"
+                  style={{ marginTop: "1rem" }}
+                >
+                  <h5 className="region-label">Quan điểm Hồ Chí Minh</h5>
                   <p
                     className="region-text"
                     style={{ fontSize: "1.1rem", fontStyle: "italic" }}
                   >
-                    "{section11?.content?.viewpoint || "Cách mạng trước hết phải có Đảng cách mệnh..."}"
+                    "
+                    {section11?.content?.viewpoint ||
+                      "Cách mạng trước hết phải có Đảng cách mệnh..."}
+                    "
                   </p>
-                </div>
-                <div className="region-info south" style={{ marginTop: "1rem" }}>
-                  <h5 className="region-label">Vai trò lịch sử</h5>
-                  <ul className="challenges-list">
-                    {/* Check an toàn trước khi render */}
-                    <li className="challenge-item">
-                      {section11?.content?.historical_role?.crisis_resolution || "Chấm dứt khủng hoảng đường lối."}
-                    </li>
-                    <li className="challenge-item">
-                      {section11?.content?.historical_role?.decisive_factor || "Nhân tố quyết định thắng lợi."}
-                    </li>
-                  </ul>
+                  <p style={{ marginTop: "1rem", fontSize: "0.95rem" }}>
+                    <strong>Kết luận:</strong>{" "}
+                    {section11?.content?.leadership_role ||
+                      "Sự lãnh đạo của Đảng là nhân tố quyết định."}
+                  </p>
                 </div>
               </div>
             </div>
@@ -94,21 +103,24 @@ export default function FoundationSection() {
 
       {/* --- PHẦN 1.2: BẢN CHẤT CỦA ĐẢNG --- */}
       <div className="section-block">
-        <ScrollReveal variant="fadeUp" delay={0.1}>
+        {/* <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
             <div className="subsection-number">1.2</div>
-            <h3 className="subsection-title">{section12?.title || "Bản chất Đảng"}</h3>
+            <h3 className="subsection-title">
+              {section12?.title || "Bản chất Đảng"}
+            </h3>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         <ScrollReveal variant="scaleIn" delay={0.2} duration={0.8}>
           <div className="strategies-comparison">
             {/* Cột 1: Mác - Lênin */}
-            <div className="strategy-block north">
+            {/* <div className="strategy-block north">
               <h4 className="strategy-region">Quan điểm Mác - Lênin</h4>
               <div className="strategy-details">
                 <p className="role-highlight" style={{ textAlign: "justify" }}>
-                  {section12?.content?.marx_lenin_view || "Đảng là đội tiên phong của giai cấp công nhân."}
+                  {section12?.content?.marx_lenin_view ||
+                    "Đảng là đội tiên phong của giai cấp công nhân."}
                 </p>
                 <Image
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Marx_old.jpg/220px-Marx_old.jpg"
@@ -118,14 +130,14 @@ export default function FoundationSection() {
                     borderRadius: "50%",
                     margin: "1rem auto",
                     display: "block",
-                    border: "2px solid #fff"
+                    border: "2px solid #fff",
                   }}
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Cột 2: Hồ Chí Minh (Sáng tạo) */}
-            <div className="strategy-block south">
+            {/* <div className="strategy-block south">
               <h4 className="strategy-region">Sự sáng tạo Hồ Chí Minh</h4>
               <div className="strategy-details">
                 <p
@@ -136,7 +148,8 @@ export default function FoundationSection() {
                     color: "var(--lacquer-red)", // Màu đỏ sơn mài
                   }}
                 >
-                  {section12?.content?.hcm_innovation || "Đảng của GCCN, nhân dân lao động và cả dân tộc."}
+                  {section12?.content?.hcm_innovation ||
+                    "Đảng của GCCN, nhân dân lao động và cả dân tộc."}
                 </p>
                 <Image
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ho_Chi_Minh_1946.jpg/220px-Ho_Chi_Minh_1946.jpg"
@@ -146,24 +159,26 @@ export default function FoundationSection() {
                     borderRadius: "50%",
                     margin: "1rem auto",
                     display: "block",
-                    border: "2px solid var(--lacquer-gold)"
+                    border: "2px solid var(--lacquer-gold)",
                   }}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </ScrollReveal>
 
         {/* Phần Ý nghĩa */}
-        <ScrollReveal variant="fadeUp" delay={0.15} duration={0.7}>
+        {/* <ScrollReveal variant="fadeUp" delay={0.15} duration={0.7}>
           <div className="table-wrapper">
             <h4 className="table-title">Ý Nghĩa & Sức Mạnh Đại Đoàn Kết</h4>
-            <ul className="challenges-list" style={{ listStyle: "none", padding: "1rem" }}>
-               {/* Render mảng significance an toàn */}
-               {renderList(section12?.content?.significance)}
+            <ul
+              className="challenges-list"
+              style={{ listStyle: "none", padding: "1rem" }}
+            >
+              {renderList(section12?.content?.significance)}
             </ul>
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
       </div>
     </div>
   );

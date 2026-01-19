@@ -210,7 +210,7 @@ html {
 .museum-section {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 6rem 3rem;
+  /* padding: 6rem 3rem; */
   position: relative;
 }
 

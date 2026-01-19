@@ -11,20 +11,20 @@ import "./ChatbotPopup.css";
 
 const suggestedPrompts = [
   {
-    title: "Đảng là Đạo đức",
-    text: "Phân tích câu nói 'Đảng ta là đạo đức, là văn minh' của Bác Hồ.",
+    title: "Vai trò Lãnh đạo Đảng",
+    text: "Theo tư tưởng Hồ Chí Minh, vai trò lãnh đạo của Đảng Cộng sản Việt Nam là gì? Tại sao Người nói 'người cầm lái có vững thuyền mới chạy'?",
   },
   {
-    title: "Tư tưởng & 4.0",
-    text: "Làm thế nào để vận dụng tư tưởng Hồ Chí Minh vào chuyển đổi số?",
+    title: "Dân của dân, do dân, vì dân",
+    text: "Giải thích tư tưởng nhà nước dân chủ của Hồ Chí Minh với ba yếu tố: của dân, do dân, và vì dân.",
   },
   {
-    title: "Chống Quan liêu",
-    text: "Biểu hiện của bệnh quan liêu trong thời đại công nghệ là gì?",
+    title: "Đạo đức & Văn minh Đảng",
+    text: "Hồ Chí Minh nói 'Đảng là đạo đức, là văn minh'. Làm thế nào để giữ nguyên tắc này trong kỷ nguyên số?",
   },
   {
-    title: "Tứ đức Cách mạng",
-    text: "Giải thích ý nghĩa của Cần, Kiệm, Liêm, Chính.",
+    title: "Chống Bệnh Quan liêu",
+    text: "Cảnh báo nào của Hồ Chí Minh về bệnh quan liêu và những giải pháp để phòng chống tiêu cực?",
   },
 ];
 

@@ -51,7 +51,7 @@ export default function HomePage() {
     },
     {
       key: "victory",
-      title: "V. Khát vọng & 4.0",
+      title: "V. Thời đại mới",
       years: "Thực tiễn",
       subtitle: "Chuyển đổi số & Tầm nhìn tương lai",
     },
@@ -97,7 +97,7 @@ export default function HomePage() {
         id={currentChapter.key}
         className={`museum-section ${currentChapter.key}-section magazine-section bg-${currentChapter.key}`}
       >
-        <ScrollReveal variant="fadeUp" duration={0.8}>
+        {/* <ScrollReveal variant="fadeUp" duration={0.8}>
           <div className="section-header">
             <div className="section-roman">{currentChapter.title}</div>
             <div className="section-years">{currentChapter.years}</div>
@@ -105,7 +105,7 @@ export default function HomePage() {
               <div className="section-subtitle">{currentChapter.subtitle}</div>
             )}
           </div>
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         {activeSection === "foundation" && <FoundationSection />}
         {activeSection === "strategy" && <StrategySection />}

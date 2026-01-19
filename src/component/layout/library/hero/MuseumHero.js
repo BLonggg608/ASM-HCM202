@@ -1,6 +1,11 @@
 "use client";
 
-import { FlagOutlined, StarOutlined, ReadOutlined, RocketOutlined } from "@ant-design/icons"; // Import thêm icon nếu thích
+import {
+  FlagOutlined,
+  StarOutlined,
+  ReadOutlined,
+  RocketOutlined,
+} from "@ant-design/icons"; // Import thêm icon nếu thích
 import { Typography } from "antd";
 import "./MuseumHero.css";
 
@@ -13,7 +18,7 @@ export default function MuseumHero() {
       <div className="hero-content">
         <div className="hero-badge">
           <StarOutlined className="badge-icon" />
-          <span>HCM202 - Nhóm 5 - SE1835</span>
+          <span>Chương IV: Tư tưởng Hồ Chí Minh về Đảng và Nhà nước</span>
         </div>
 
         <Title level={1} className="hero-main-title">
@@ -27,29 +32,29 @@ export default function MuseumHero() {
         </div>
 
         <Title level={2} className="hero-subtitle">
-          Vận dụng tư tưởng Hồ Chí Minh
-          <br />& Khát vọng kỷ nguyên số
+          Dân của dân, do dân, vì dân
+          <br />& Thích ứng với kỷ nguyên số
         </Title>
 
         <div className="hero-years">
           <FlagOutlined className="years-icon" />
-          <span>Lý luận & 4.0</span>
+          <span>Lý thuyết & Thực tiễn</span>
         </div>
 
         <div className="hero-learning-outcomes">
-          {/* Sửa CLO2 -> LÝ LUẬN (Hoặc KIẾN THỨC) */}
+          {/* Tư tưởng về Đảng Cộng sản Việt Nam */}
           <div className="outcome-badge">
-            <span className="outcome-label">LÝ LUẬN</span>
+            <span className="outcome-label">ĐẢNG CỘNG SẢN</span>
             <span className="outcome-text">
-              Phân tích bản chất và nguyên tắc xây dựng Đảng
+              Tính tất yếu, vai trò lãnh đạo & nguyên tắc xây dựng Đảng
             </span>
           </div>
 
-          {/* Sửa CLO4 -> VẬN DỤNG (Hoặc THỰC TIỄN) */}
+          {/* Tư tưởng về Nhà nước dân chủ */}
           <div className="outcome-badge">
-            <span className="outcome-label">VẬN DỤNG</span>
+            <span className="outcome-label">NHÀ NƯỚC DÂN CHỦ</span>
             <span className="outcome-text">
-              Vận dụng giải pháp vào thực tiễn Chuyển đổi số
+              Nhà nước pháp quyền, trong sạch, vững mạnh
             </span>
           </div>
         </div>

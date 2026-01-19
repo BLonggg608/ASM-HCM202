@@ -26,7 +26,7 @@ export default function NorthSection() {
       <div className="section-block">
         <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
-            <div className="subsection-number">3.1</div>
+            {/* <div className="subsection-number">3.1</div> */}
             <h3 className="subsection-title">{section31.title}</h3>
           </div>
         </ScrollReveal>
@@ -49,7 +49,7 @@ export default function NorthSection() {
       </div>
 
       {/* Section 3.2: Chống Giặc nội xâm */}
-      <div className="section-block">
+      {/* <div className="section-block">
         <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
             <div className="subsection-number">3.2</div>
@@ -88,7 +88,7 @@ export default function NorthSection() {
                 ))}
             </div>
          </div>
-      </div>
+      </div> */}
 
       <Modal
         title={modalContent.title}

@@ -26,9 +26,9 @@ const contentData = {
   ],
 
   introduction: {
-    title: "Lời mở đầu: Từ Tư tưởng đến Hiện thực Kỷ nguyên số",
+    title: "Lời mở đầu: Tư tưởng Hồ Chí Minh & Kỷ nguyên Số",
     content:
-      "Trong bối cảnh Cách mạng công nghiệp 4.0, tư tưởng Hồ Chí Minh về Đảng Cộng sản 'là đạo đức, là văn minh' và Nhà nước 'của dân, do dân, vì dân' vẫn giữ nguyên giá trị thời đại. Website này hệ thống hóa cơ sở lý luận và liên hệ thực tiễn để trả lời cho câu hỏi: Làm thế nào để giữ vững bản chất cách mạng của Đảng trong môi trường số?",
+      "Hồ Chí Minh nhiều lần nhấn mạnh: 'Đảng ta là đạo đức, là văn minh', nhưng đồng thời cũng cảnh báo nguy cơ Đảng có thể mắc bệnh quan liêu, xa rời nhân dân. Trong thời kỳ hội nhập và cách mạng công nghiệp 4.0, khi thông tin đa chiều, mạng xã hội phát triển, niềm tin của giới trẻ vào các thiết chế xã hội chịu nhiều thử thách. Câu hỏi đặt ra: Làm thế nào để Đảng vừa giữ bản chất cách mạng, vừa thích ứng với yêu cầu mới của thời đại, vừa khơi dậy niềm tin của thanh niên?",
     image_placeholder: "intro_hcm_ideology",
     imageUrl:
       "https://media.vov.vn/sites/default/files/styles/large/public/2021-05/bac_ho_noi_chuyen_voi_can_bo__dang_vien.jpg",
@@ -42,17 +42,15 @@ const contentData = {
       sections: [
         {
           section_id: "1.1",
-          title: "Sự Cần thiết của Đảng (Tính tất yếu)",
+          title: "Quy luật Ra đời & Vai trò Lãnh đạo",
           content: {
+            formation_law:
+              "Hồ Chí Minh sáng tạo khi chỉ ra quy luật hình thành Đảng Cộng sản Việt Nam là sự kết hợp của 3 yếu tố: Chủ nghĩa Mác - Lênin + Phong trào công nhân + Phong trào yêu nước. Điều này cho thấy Đảng không chỉ đại diện cho giai cấp công nhân mà còn cho cả dân tộc.",
             viewpoint:
-              "Cách mạng muốn thắng lợi thì trước hết phải có 'Đảng cách mệnh'. Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy.",
-            historical_role: {
-              crisis_resolution:
-                "Đảng ra đời chấm dứt sự khủng hoảng về đường lối cứu nước cuối thế kỷ XIX, đầu thế kỷ XX.",
-              decisive_factor:
-                "Đảng là nhân tố quyết định hàng đầu đưa cách mạng Việt Nam đi từ thắng lợi này đến thắng lợi khác.",
-            },
-            image_placeholder: "party_foundation_necessity",
+              "Cách mạng trước hết phải có 'Đảng cách mệnh'... Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy.",
+            leadership_role:
+              "Sự lãnh đạo của Đảng là nhân tố quyết định thắng lợi của cách mạng.",
+            image_placeholder: "party_formation_law",
             imageUrl: "",
           },
         },
@@ -82,10 +80,12 @@ const contentData = {
       sections: [
         {
           section_id: "2.1",
-          title: "Luận điểm: Đảng là Đạo đức",
+          title: "Đảng là Đạo đức",
           content: {
+            concept:
+              "Đạo đức cách mạng là cái gốc, cái nền tảng của người cán bộ.",
             definition:
-              "Đạo đức cách mạng là cái gốc, cái nền tảng của người cán bộ. Vào Đảng là để phục vụ, cống hiến, không phải để thăng quan tiến chức.",
+              "Vào Đảng là để phục vụ, cống hiến, không phải để thăng quan tiến chức.",
             purpose:
               "Mục đích duy nhất: Làm cho Tổ quốc giàu mạnh, đồng bào sung sướng. Đảng không có lợi ích riêng nằm ngoài lợi ích dân tộc.",
             four_virtues: [
@@ -120,8 +120,32 @@ const contentData = {
         },
         {
           section_id: "2.2",
-          title: "Luận điểm: Đảng là Văn minh",
+          title: "Đảng là Văn minh",
           content: {
+            concept_intro:
+              "Đảng là đạo đức, nhưng cũng phải là văn minh. Đảng tiêu biểu cho lương tâm, trí tuệ và danh dự của dân tộc; hoạt động trong khuôn khổ Hiến pháp và pháp luật.",
+            characteristics: [
+              {
+                aspect: "Lương tâm",
+                description:
+                  "Đảng là lương tri: Tôn trọng và bảo vệ lẽ phải, công lý.",
+              },
+              {
+                aspect: "Trí tuệ",
+                description:
+                  "Đảng có lý luận tiên phong (Chủ nghĩa Mác - Lênin) soi đường, tiếp thu tinh hoa văn hóa nhân loại.",
+              },
+              {
+                aspect: "Thượng tôn Pháp luật",
+                description:
+                  "Đảng thượng tôn pháp luật: Hoạt động trong khuôn khổ Hiến pháp và pháp luật. Pháp luật phải nghiêm minh, công bằng, không có vùng cấm.",
+              },
+              {
+                aspect: "Nội bộ Đoàn kết",
+                description:
+                  "Đảng trong sạch vững mạnh: Nội bộ đoàn kết, không chia rẽ bè phái.",
+              },
+            ],
             criteria: [
               "Đảng là lương tri: Tôn trọng và bảo vệ lẽ phải, công lý.",
               "Đảng là trí tuệ: Có lý luận tiên phong (Chủ nghĩa Mác - Lênin) soi đường, tiếp thu tinh hoa văn hóa nhân loại.",
@@ -146,35 +170,43 @@ const contentData = {
           section_id: "3.1",
           title: "Năm Nguyên tắc Xây dựng Đảng",
           content: {
+            intro:
+              "Hồ Chí Minh đề ra 5 nguyên tắc cơ bản để xây dựng Đảng trong sạch, vững mạnh:",
             principles: [
               {
+                name: "Nền tảng tư tưởng",
+                desc: "Lấy Chủ nghĩa Mác - Lênin làm cốt lõi. Đảng phải có nghĩa vụ làm cốt, trong Đảng ai cũng phải hiểu và theo chủ nghĩa ấy.",
+              },
+              {
                 name: "Tập trung dân chủ",
-                desc: "Nguyên tắc rường cột, quan trọng nhất. Dân chủ trong thảo luận, Tập trung trong hành động (thiểu số phục tùng đa số). Tránh 'trống đánh xuôi kèn thổi ngược'.",
+                desc: "Nguyên tắc tổ chức cơ bản. Dân chủ để mở rộng sáng kiến, tập trung để thống nhất ý chí và hành động.",
               },
               {
                 name: "Tập thể lãnh đạo, cá nhân phụ trách",
-                desc: "Chống độc đoán chuyên quyền và chống dựa dẫm ỷ lại.",
+                desc: "Chống độc đoán chuyên quyền và chống dựa dẫm ỷ lại vào tập thể.",
               },
               {
                 name: "Tự phê bình và phê bình",
-                desc: "Quy luật phát triển của Đảng. Phải trung thực, kiên quyết, 'như rửa mặt hàng ngày'. Phê bình việc chứ không phê bình người.",
+                desc: 'Quy luật phát triển của Đảng. Phải thực hiện thường xuyên, nghiêm túc như "rửa mặt hàng ngày".',
               },
               {
-                name: "Kỷ luật nghiêm minh, tự giác",
-                desc: "Không có vùng cấm. 'Pháp bất vị thân' (Pháp luật không thiên vị người thân).",
+                name: "Kỷ luật nghiêm minh",
+                desc: "Kỷ luật sắt nhưng trên cơ sở tự giác. Không có Đảng viên nào đứng trên hay đứng ngoài kỷ luật.",
               },
               {
-                name: "Đoàn kết thống nhất",
-                desc: "Giữ gìn sự đoàn kết trong Đảng như giữ gìn con ngươi của mắt mình.",
+                name: "Đoàn kết, thống nhất",
+                desc: "Giữ gìn sự đoàn kết trong Đảng như giữ gìn con ngươi của mắt mình. Thể hiện sức mạnh của Đảng.",
               },
             ],
+            building_cadres:
+              "Xây dựng đội ngũ cán bộ: Cán bộ là cái gốc của mọi công việc. Phải xây dựng đội ngũ vừa có 'đức' (gốc), vừa có 'tài'.",
             image_placeholder: "party_building_principles",
             imageUrl: "",
           },
         },
         {
           section_id: "3.2",
-          title: "Cảnh báo các căn bệnh 'Giặc nội xâm'",
+          title: "Cảnh báo 'Giặc nội xâm' & Căn bệnh Đảng",
           content: {
             warning:
               "Đảng cầm quyền rất dễ bị thoái hóa biến chất nếu không tu dưỡng. Hồ Chí Minh cảnh báo: 'Phải giữ gìn Đảng ta thật trong sạch'.",
@@ -223,51 +255,56 @@ const contentData = {
       sections: [
         {
           section_id: "4.1",
-          title: "Nhà nước Của Nhân dân",
+          title: "Nhà nước Dân chủ",
           content: {
-            power_source:
-              "Mọi quyền lực trong nhà nước và xã hội đều thuộc về nhân dân.",
-            political_rights:
-              "Nhân dân có quyền bầu cử, ứng cử, bãi miễn đại biểu Quốc hội/HĐND nếu họ không còn xứng đáng.",
-            democracy_forms:
-              "Thực hiện thông qua Dân chủ trực tiếp và Dân chủ gián tiếp.",
+            class_nature:
+              "Bản chất giai cấp: Nhà nước mang bản chất giai cấp công nhân, nhưng có tính nhân dân và tính dân tộc sâu sắc.",
+            of_people:
+              "Của nhân dân: Quyền lực thuộc về nhân dân. 'Dân là chủ' (vị thế) và 'dân làm chủ' (quyền và nghĩa vụ).",
+            by_people:
+              "Do nhân dân: Nhà nước do dân lập nên, dân ủng hộ, dân đóng thuế để hoạt động.",
+            for_people:
+              "Vì nhân dân: Nhà nước phục vụ lợi ích của dân, cán bộ là 'công bộc', là 'đầy tớ' của dân, không phải 'quan cách mạng'.",
             image_placeholder: "state_of_people_voting",
             imageUrl: "",
           },
         },
         {
           section_id: "4.2",
-          title: "Nhà nước Do dân & Vì dân",
+          title: "Nhà nước Pháp quyền",
           content: {
-            by_people: [
-              "Nhà nước do nhân dân lập nên thông qua bầu cử.",
-              "Nhân dân đóng thuế nuôi bộ máy nhà nước.",
-              "Nhân dân tham gia quản lý, phê bình, giám sát hoạt động cơ quan nhà nước.",
-            ],
-            for_people: [
-              "Phục vụ lợi ích và nguyện vọng chính đáng của nhân dân.",
-              "Cán bộ là 'công bộc' của dân.",
-              "Thước đo hiệu quả: Đời sống nhân dân có được ấm no, hạnh phúc, tự do hay không.",
-            ],
-            rule_of_law: {
-              concept: "Xây dựng Nhà nước Pháp quyền.",
-              principle:
-                "Quản lý xã hội bằng Hiến pháp và Pháp luật. 'Trăm điều phải có thần linh pháp quyền'.",
-              humanity: "Pháp luật phải nhân văn, bảo vệ quyền con người.",
-            },
-            image_placeholder: "state_for_people_service",
+            constitutional_and_legal:
+              "Hợp hiến, hợp pháp: Hồ Chí Minh chú trọng xây dựng Hiến pháp và pháp luật (đã tham gia soạn thảo Hiến pháp 1946, 1959). 'Trăm điều phải có thần linh pháp quyền'.",
+            rule_of_law:
+              "Thượng tôn pháp luật: Pháp luật phải nghiêm minh, công bằng, không có vùng cấm.",
+            human_rights_law:
+              "Pháp quyền nhân nghĩa: Pháp luật có tính nhân văn, khuyến thiện, vì con người.",
+            image_placeholder: "state_rule_of_law",
             imageUrl: "",
           },
         },
         {
           section_id: "4.3",
-          title: "Di chúc Hồ Chí Minh & Giữ gìn Đảng trong sạch",
+          title: "Nhà nước trong sạch, vững mạnh",
           content: {
-            significance:
-              "Năm 1969, Hồ Chí Minh nhấn mạnh trong di chúc: 'Đảng ta là một Đảng cầm quyền... Phải giữ gìn Đảng ta thật trong sạch'.",
-            legacy_mission:
-              "Xây dựng Đảng 'Đạo đức, Văn minh' không phải là nhiệm vụ một thời mà là nhiệm vụ lâu dài, thường xuyên.",
-            image_placeholder: "hcm_legacy_testament",
+            power_control:
+              "Kiểm soát quyền lực: Cần kiểm soát để tránh lạm quyền. Các hình thức: Đảng kiểm soát, nhân dân kiểm soát (bãi miễn đại biểu không xứng đáng), và kiểm soát bằng pháp luật.",
+            anti_corruption: [
+              {
+                form: "Đặc quyền, đặc lợi",
+                description: "Cậy thế, hách dịch.",
+              },
+              {
+                form: "Tham ô, lãng phí, quan liêu",
+                description:
+                  "Đây là bạn đồng minh của thực dân, phong kiến; là tội lỗi đê tiện nhất.",
+              },
+              {
+                form: "'Tư túng', 'chia rẽ', 'kiêu ngạo'",
+                description: "Gây mất đoàn kết nội bộ.",
+              },
+            ],
+            image_placeholder: "state_clean_and_strong",
             imageUrl: "",
           },
         },
@@ -303,30 +340,67 @@ const contentData = {
         },
         {
           section_id: "5.2",
-          title: "Giải pháp & Khát vọng: Đảng dẫn dắt Chuyển đổi số",
+          title: "Phân tích giải pháp & Khát vọng",
           content: {
+            analysis_question:
+              "Làm thế nào để Đảng vừa giữ được bản chất cách mạng, vừa thích ứng với yêu cầu mới của thời đại 4.0, vừa khơi dậy niềm tin của thanh niên trước nguy cơ 'bệnh quan liêu'?",
             solutions: [
               {
-                principle: "Đảng là Văn minh",
-                action:
-                  "Đảng đi đầu trong Chuyển đổi số (Digital Transformation). Dùng AI/Big Data để hỗ trợ quản lý và ra quyết định.",
+                theme:
+                  "Giữ vững bản chất cách mạng: 'Đảng là đạo đức' để trị bệnh quan liêu",
+                problem:
+                  "Trong thời đại 4.0, thông tin minh bạch hơn, bệnh quan liêu, xa rời dân dễ bị phát hiện và lan truyền nhanh chóng, làm giảm sút niềm tin.",
+                approaches: [
+                  {
+                    title: "Tự phê bình và phê bình",
+                    description:
+                      "Đảng phải dũng cảm nhận khuyết điểm công khai, không giấu giếm. Sự minh bạch chính là 'đạo đức' trong kỷ nguyên số.",
+                  },
+                  {
+                    title: "Cán bộ là đầy tớ của dân",
+                    description:
+                      "Kiến tạo các dịch vụ hành chính công trực tuyến (E-government) để phục vụ dân nhanh nhất, bớt cửa quyền, nhũng nhiễu.",
+                  },
+                ],
               },
               {
-                principle: "Tự phê bình",
-                action:
-                  "Minh bạch hóa tài sản và quy trình công vụ trên môi trường mạng (Transparency).",
+                theme:
+                  "Thích ứng với thời đại: 'Đảng là văn minh' trong kỷ nguyên số",
+                problem:
+                  "Giới trẻ (Gen Z, Gen Alpha) tiếp cận tri thức nhân loại rất nhanh. Một tổ chức lãnh đạo nếu tụt hậu về trí tuệ sẽ không thể thuyết phục được họ.",
+                approaches: [
+                  {
+                    title: "Đảng tiêu biểu cho trí tuệ",
+                    description:
+                      "Đảng cần tiên phong trong chuyển đổi số, áp dụng công nghệ vào quản trị quốc gia.",
+                  },
+                  {
+                    title: "Học tập không ngừng",
+                    description:
+                      "Đảng viên phải nâng cao trình độ để có tư duy khoa học, am hiểu công nghệ, đưa ra các quyết sách phù hợp với xu thế thời đại.",
+                  },
+                ],
               },
               {
-                principle: "Dựa vào dân",
-                action:
-                  "Xây dựng App/Web để người dân chấm điểm, feedback trực tiếp thái độ phục vụ của cán bộ.",
+                theme: "Khơi dậy niềm tin thanh niên: Dân chủ và Nêu gương",
+                problem:
+                  "Niềm tin của giới trẻ bị thử thách bởi tin giả (fake news) và các thông tin tiêu cực trên mạng xã hội.",
+                approaches: [
+                  {
+                    title: "Thực hành Dân chủ",
+                    description:
+                      "Tạo ra các kênh đối thoại trực tuyến, diễn đàn mở để thanh niên được 'bàn', được 'kiểm tra'. Khi giới trẻ thấy tiếng nói được lắng nghe, niềm tin sẽ trở lại.",
+                  },
+                  {
+                    title: "Nêu gương",
+                    description:
+                      "Cán bộ, đảng viên phải gương mẫu về đạo đức và lối sống. Hình ảnh người cán bộ giản dị, liêm chính, gần gũi (thực tế, không diễn) sẽ có sức lan tỏa mạnh mẽ nhất đối với thanh niên.",
+                  },
+                ],
               },
             ],
-            youth_role: {
-              title: "Khơi dậy niềm tin Thế hệ trẻ",
-              action:
-                "Trao quyền (Empowerment) cho thanh niên trong các dự án công nghệ quốc gia, biến khát vọng phát triển đất nước thành sản phẩm số cụ thể.",
-            },
+            youth_empowerment:
+              "Trao quyền (Empowerment) cho thanh niên trong các dự án công nghệ quốc gia, biến khát vọng phát triển đất nước thành sản phẩm số cụ thể.",
             image_placeholder: "future_aspirations_tech",
             imageUrl: "",
           },

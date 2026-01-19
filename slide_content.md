@@ -1,0 +1,91 @@
+**Chương IV: Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam và Nhà nước của nhân dân, do nhân dân, vì nhân dân**
+
+I. Tư tưởng Hồ Chí Minh về Đảng Cộng sản Việt Nam  
+1\. Tính tất yếu và vai trò lãnh đạo của Đảng Cộng sản Việt Nam  
+2\. Đảng phải trong sạch, vững mạnh
+
+II. Tư tưởng Hồ Chí Minh về Nhà nước của dân, do dân, vì dân  
+1\. Nhà nước dân chủ  
+2\. Nhà nước pháp quyền  
+3\. Nhà nước trong sạch, vững mạnh
+
+Câu hỏi phân tích :   
+Hồ Chí Minh nhiều lần nhấn mạnh: “Đảng ta là đạo đức, là văn minh”, nhưng đồng thời Người cũng cảnh báo nguy cơ Đảng có thể mắc bệnh quan liêu, xa rời nhân dân. Trong thời kỳ hội nhập và cách mạng công nghiệp 4.0, khi thông tin đa chiều, mạng xã hội phát triển, niềm tin của giới trẻ vào các thiết chế xã hội nói chung chịu nhiều thử thách. Điều này đặt ra câu hỏi: làm thế nào để Đảng vừa giữ được bản chất cách mạng, vừa thích ứng với yêu cầu mới của thời đại, vừa khơi dậy niềm tin của thanh niên?
+
+---
+
+### **PHẦN 1: NỘI DUNG TRÌNH BÀY (Dựa trên Chương 4\)**
+
+#### **I. TƯ TƯỞNG HỒ CHÍ MINH VỀ ĐẢNG CỘNG SẢN VIỆT NAM**
+
+**1\. Tính tất yếu và vai trò lãnh đạo của Đảng Cộng sản Việt Nam**
+
+* **Quy luật ra đời:** Khác với lý luận của Lênin (Đảng \= Chủ nghĩa Mác \+ Phong trào công nhân), Hồ Chí Minh sáng tạo khi chỉ ra quy luật hình thành Đảng Cộng sản Việt Nam là sự kết hợp của 3 yếu tố: **Chủ nghĩa Mác \- Lênin \+ Phong trào công nhân \+ Phong trào yêu nước**. Điều này cho thấy Đảng không chỉ đại diện cho giai cấp công nhân mà còn cho cả dân tộc.  
+* **Vai trò lãnh đạo (Người cầm lái):** Hồ Chí Minh khẳng định: "Cách mạng trước hết phải có đảng cách mệnh... Đảng có vững cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới chạy". Sự lãnh đạo của Đảng là nhân tố quyết định thắng lợi của cách mạng.
+
+**2\. Đảng phải trong sạch, vững mạnh**
+
+* **Đảng là đạo đức, là văn minh:**  
+  1. **Là đạo đức:** Đảng không có lợi ích riêng, mục đích duy nhất là giải phóng dân tộc, giải phóng xã hội. Cán bộ đảng viên phải thấm nhuần đạo đức cách mạng, cần, kiệm, liêm, chính, chí công vô tư.  
+  2. **Là văn minh:** Đảng tiêu biểu cho lương tâm, trí tuệ và danh dự của dân tộc; hoạt động trong khuôn khổ Hiến pháp và pháp luật.  
+* **Các nguyên tắc xây dựng Đảng:**  
+  1. Lấy chủ nghĩa Mác \- Lênin làm nền tảng tư tưởng.  
+  2. Tập trung dân chủ (nguyên tắc tổ chức cơ bản).  
+  3. Tập thể lãnh đạo, cá nhân phụ trách.  
+  4. Tự phê bình và phê bình (như "rửa mặt hàng ngày").  
+  5. Kỷ luật nghiêm minh, tự giác.  
+  6. Đoàn kết, thống nhất trong Đảng.  
+* **Xây dựng đội ngũ cán bộ:** Cán bộ là cái gốc của mọi công việc. Phải xây dựng đội ngũ vừa có "đức" (gốc), vừa có "tài".
+
+#### **II. TƯ TƯỞNG HỒ CHÍ MINH VỀ NHÀ NƯỚC CỦA DÂN, DO DÂN, VÌ DÂN**
+
+**1\. Nhà nước dân chủ**
+
+* **Bản chất giai cấp:** Nhà nước mang bản chất giai cấp công nhân, nhưng có tính nhân dân và tính dân tộc sâu sắc.  
+* **Của nhân dân:** Quyền lực thuộc về nhân dân. "Dân là chủ" (vị thế) và "dân làm chủ" (quyền và nghĩa vụ).  
+* **Do nhân dân:** Nhà nước do dân lập nên, dân ủng hộ, dân đóng thuế để hoạt động.  
+* **Vì nhân dân:** Nhà nước phục vụ lợi ích của dân, cán bộ là "công bộc", là "đầy tớ" của dân, không phải "quan cách mạng".
+
+**2\. Nhà nước pháp quyền**
+
+* **Hợp hiến, hợp pháp:** Hồ Chí Minh chú trọng xây dựng Hiến pháp và pháp luật (đã tham gia soạn thảo Hiến pháp 1946, 1959). "Trăm điều phải có thần linh pháp quyền".  
+* **Thượng tôn pháp luật:** Pháp luật phải nghiêm minh, công bằng, không có vùng cấm.  
+* **Pháp quyền nhân nghĩa:** Pháp luật có tính nhân văn, khuyến thiện, vì con người.
+
+**3\. Nhà nước trong sạch, vững mạnh**
+
+* **Kiểm soát quyền lực:** Cần kiểm soát để tránh lạm quyền. Các hình thức: Đảng kiểm soát, nhân dân kiểm soát (bãi miễn đại biểu không xứng đáng), và kiểm soát bằng pháp luật.  
+* **Phòng, chống tiêu cực (Giặc nội xâm):** Kiên quyết chống:  
+  * **Đặc quyền, đặc lợi:** Cậy thế, hách dịch.  
+  * **Tham ô, lãng phí, quan liêu:** Đây là bạn đồng minh của thực dân, phong kiến; là tội lỗi đê tiện nhất.  
+  * **"Tư túng", "chia rẽ", "kiêu ngạo"**: Gây mất đoàn kết nội bộ.
+
+---
+
+### **PHẦN 2: PHÂN TÍCH CÂU HỎI THẢO LUẬN**
+
+**Câu hỏi:** *Làm thế nào để Đảng vừa giữ được bản chất cách mạng, vừa thích ứng với yêu cầu mới của thời đại 4.0, vừa khơi dậy niềm tin của thanh niên trước nguy cơ "bệnh quan liêu"?*
+
+Dưới đây là gợi ý phân tích dựa trên sự vận dụng tư tưởng Hồ Chí Minh vào bối cảnh hiện nay:
+
+**1\. Giữ vững bản chất cách mạng: "Đảng là đạo đức" để trị bệnh quan liêu**
+
+* **Vấn đề:** Trong thời đại 4.0, thông tin minh bạch hơn, bệnh quan liêu, xa rời dân dễ bị phát hiện và lan truyền nhanh chóng, làm giảm sút niềm tin.  
+* **Giải pháp theo tư tưởng HCM:**  
+  * Phải thực hiện nghiêm nguyên tắc **"Tự phê bình và phê bình"**. Đảng phải dũng cảm nhận khuyết điểm công khai, không giấu giếm. Sự minh bạch chính là "đạo đức" trong kỷ nguyên số.  
+  * Quán triệt tư tưởng **"Cán bộ là đầy tớ của dân"**. Trong 4.0, "đầy tớ" nghĩa là kiến tạo các dịch vụ hành chính công trực tuyến (E-government) để phục vụ dân nhanh nhất, bớt cửa quyền, nhũng nhiễu.
+
+**2\. Thích ứng với thời đại: "Đảng là văn minh" trong kỷ nguyên số**
+
+* **Vấn đề:** Giới trẻ (Gen Z, Gen Alpha) tiếp cận tri thức nhân loại rất nhanh. Một tổ chức lãnh đạo nếu tụt hậu về trí tuệ sẽ không thể thuyết phục được họ.  
+* **Giải pháp theo tư tưởng HCM:**  
+  * **"Đảng là văn minh"** nghĩa là Đảng phải tiêu biểu cho trí tuệ. Đảng cần tiên phong trong chuyển đổi số, áp dụng công nghệ vào quản trị quốc gia.  
+  * Đảng viên phải không ngừng học tập, nâng cao trình độ để có tư duy khoa học, am hiểu công nghệ, từ đó đưa ra các quyết sách đúng đắn, phù hợp với xu thế thời đại.
+
+**3\. Khơi dậy niềm tin thanh niên: Dân chủ và Nêu gương**
+
+* **Vấn đề:** Niềm tin của giới trẻ bị thử thách bởi tin giả (fake news) và các thông tin tiêu cực trên mạng xã hội.  
+* **Giải pháp theo tư tưởng HCM:**  
+  * **Thực hành Dân chủ:** Hồ Chí Minh khẳng định "Dân là chủ". Cần tạo ra các kênh đối thoại trực tuyến, diễn đàn mở để thanh niên được "bàn", được "kiểm tra". Khi giới trẻ thấy tiếng nói của mình được lắng nghe và tôn trọng, niềm tin sẽ trở lại.  
+  * **Nêu gương:** Bác dạy "Một tấm gương sống còn có giá trị hơn một trăm bài diễn văn tuyên truyền". Cán bộ, đảng viên phải gương mẫu về đạo đức và lối sống. Trong thời đại mạng xã hội, hình ảnh người cán bộ giản dị, liêm chính, gần gũi (thực tế, không diễn) sẽ có sức lan tỏa và thuyết phục mạnh mẽ nhất đối với thanh niên.
+

@@ -65,15 +65,15 @@ export default function Dashboard() {
       icon: "BookOutlined",
       color: "lacquer-red",
     },
-    {
-      title: "Trắc Nghiệm Kiến Thức",
-      description:
-        "Kiểm tra sự hiểu biết về Đạo đức cách mạng và Nhà nước pháp quyền",
-      // link: "https://play.blooket.com/play",
-      link: "/library/quiz",
-      icon: "EditOutlined",
-      color: "jade-green",
-    },
+    // {
+    //   title: "Trắc Nghiệm Kiến Thức",
+    //   description:
+    //     "Ôn tập kiến thức về Đảng Cộng sản Việt Nam và Tư tưởng Hồ Chí Minh qua các câu hỏi tương tác",
+    //   // link: "https://play.blooket.com/play",
+    //   link: "/quiz",
+    //   icon: "EditOutlined",
+    //   color: "jade-green",
+    // },
     {
       title: "AI Usage",
       description:

@@ -21,7 +21,7 @@ export default function StrategySection() {
       <div className="resolution-block">
         <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
-            <div className="subsection-number">2.1</div>
+            {/* <div className="subsection-number">2.1</div> */}
             <h3 className="subsection-title">
               {section21?.title || "Đảng là Đạo đức"}
             </h3>
@@ -31,12 +31,39 @@ export default function StrategySection() {
         <ScrollReveal variant="fadeIn" delay={0.2} duration={0.8}>
           <div className="resolution-content">
             <div className="resolution-intro">
-              <p>
-                <strong>Định nghĩa:</strong>{" "}
-                {section21?.content?.definition || "Đạo đức là cái gốc..."}
+              <p
+                style={{
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  marginBottom: "1rem",
+                }}
+              >
+                <strong>Khái niệm:</strong>{" "}
+                {section21?.content?.concept ||
+                  "Đạo đức cách mạng là cái gốc..."}
               </p>
-              <p style={{ fontStyle: "italic", marginTop: "1rem" }}>
-                "{section21?.content?.purpose || "Lo trước thiên hạ..."}"
+              <p
+                style={{
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  marginBottom: "1rem",
+                }}
+              >
+                <strong>Định nghĩa:</strong>{" "}
+                {section21?.content?.definition ||
+                  "Vào Đảng là để phục vụ, cống hiến..."}
+              </p>
+              <p
+                style={{
+                  fontStyle: "italic",
+                  marginTop: "1rem",
+                  textAlign: "justify",
+                }}
+              >
+                "
+                {section21?.content?.purpose ||
+                  "Mục đích duy nhất: Làm cho Tổ quốc giàu mạnh..."}
+                "
               </p>
             </div>
 
@@ -69,6 +96,32 @@ export default function StrategySection() {
                 </div>
               )}
             </div>
+
+            {/* Lời dạy của Bác Hồ */}
+            {section21?.content?.bac_ho_quote && (
+              <div
+                style={{
+                  marginTop: "2rem",
+                  padding: "1.5rem",
+                  backgroundColor: "rgba(212, 55, 49, 0.05)",
+                  borderLeft: "4px solid var(--lacquer-red)",
+                  borderRadius: "4px",
+                }}
+              >
+                <p style={{ fontStyle: "italic", color: "var(--lacquer-red)" }}>
+                  "{section21.content.bac_ho_quote}"
+                </p>
+                <p
+                  style={{
+                    textAlign: "right",
+                    fontSize: "0.9rem",
+                    marginTop: "0.5rem",
+                  }}
+                >
+                  — Chủ tịch Hồ Chí Minh
+                </p>
+              </div>
+            )}
           </div>
         </ScrollReveal>
       </div>
@@ -77,7 +130,7 @@ export default function StrategySection() {
       <div className="dongkhoi-block">
         <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="subsection-header">
-            <div className="subsection-number">2.2</div>
+            {/* <div className="subsection-number">2.2</div> */}
             <h3 className="subsection-title">
               {section22?.title || "Đảng là Văn minh"}
             </h3>
@@ -95,7 +148,7 @@ export default function StrategySection() {
               }}
             >
               <Image
-                src="https://tuyengiao.vn/Uploads/2019/6/5/26/dang-cong-san-viet-nam.jpg"
+                src="https://edumedia.lamdongtructuyen.vn//Images/LDG/khoa.sgd/BONHIEMPGDD/000_638331485433391715.jpg"
                 alt="Đảng Văn Minh"
                 preview={true}
                 style={{
@@ -109,6 +162,18 @@ export default function StrategySection() {
             <div
               style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
             >
+              <p
+                style={{
+                  fontSize: "1rem",
+                  textAlign: "justify",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                <strong>Khái niệm:</strong>{" "}
+                {section22?.content?.concept_intro ||
+                  "Đảng tiêu biểu cho lương tâm..."}
+              </p>
+
               <h4 className="content-subtitle">Tiêu chí Văn Minh</h4>
               <ul style={{ listStyle: "none", padding: 0 }}>
                 {criteria.length > 0 ? (
@@ -137,9 +202,12 @@ export default function StrategySection() {
                   <li>Đang cập nhật...</li>
                 )}
               </ul>
-              
+
               {section22?.content?.conclusion && (
-                <div className="achievement-box">
+                <div
+                  className="achievement-box"
+                  style={{ marginTop: "1.5rem" }}
+                >
                   <strong>Kết luận:</strong> {section22.content.conclusion}
                 </div>
               )}

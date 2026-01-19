@@ -9,7 +9,7 @@ const { Header } = Layout;
 export default function MuseumHeader({ activeSection, setActiveSection }) {
   const menuItems = [
     { key: "hero", label: "Trang chủ", icon: <StarOutlined /> },
-    { key: "foundation", label: "I. Bản chất Đảng", icon: <BookOutlined /> },
+    { key: "foundation", label: "I. Sự cần thiết", icon: <BookOutlined /> },
     {
       key: "strategy",
       label: "II. Đạo đức & Văn minh",
@@ -17,7 +17,7 @@ export default function MuseumHeader({ activeSection, setActiveSection }) {
     },
     { key: "north", label: "III. Xây dựng Đảng", icon: <BookOutlined /> },
     { key: "south", label: "IV. Nhà nước của Dân", icon: <BookOutlined /> },
-    { key: "victory", label: "V. Khát vọng 4.0", icon: <BookOutlined /> },
+    { key: "victory", label: "V. Thời đại mới", icon: <BookOutlined /> },
     { key: "footer", label: "Thông tin", icon: <StarOutlined /> },
   ];
 
