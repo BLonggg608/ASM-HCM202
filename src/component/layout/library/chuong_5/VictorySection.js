@@ -67,7 +67,7 @@ export default function VictorySection() {
                         marginBottom: "0.5rem",
                       }}
                     >
-                      📍 Vấn đề:
+                      Vấn đề:
                     </p>
                     <p style={{ fontSize: "0.85rem", color: "#555" }}>
                       {solution.problem}
@@ -81,7 +81,7 @@ export default function VictorySection() {
                       marginBottom: "0.5rem",
                     }}
                   >
-                    💡 Giải pháp:
+                    Giải pháp:
                   </p>
                   {solution.approaches &&
                     Array.isArray(solution.approaches) && (
